@@ -252,7 +252,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="bg-gradient-to-b lg:bg-gradient-to-l from-[#FF961B] to-transparent absolute inset-0 z-20" />
+            <div className="bg-gradient-to-b lg:bg-gradient-to-l from-[#FFB200] to-transparent absolute inset-0 z-20" />
 
             <div className="absolute md:left-[15vw] bottom-0 w-full rounded-full ">
               <Image
