@@ -12,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="text-black w-full absolute top-0 z-[10000] overflow-hidden">
-      <div className="flex items-center justify-between px-4 py-1 lg:py-0 lg:px-5 max-w-6xl lg:mx-auto">
+    <header className="text-black w-full absolute top-0 z-[10000]">
+      <div className="flex items-center justify-between relative px-4 py-1 lg:py-0 lg:px-5 max-w-6xl lg:mx-auto">
         <Link
           className="w-32 h-auto lg:w-56 -mb-1 cursor-pointer p-0 py-2 lg:py-0 "
           href="/"

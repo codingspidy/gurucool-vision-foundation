@@ -31,6 +31,7 @@ export default function Home() {
   };
 
   return (
+    <>
     <div>
       <section id="intro">
         <div className="w-full relative">
@@ -50,7 +51,7 @@ export default function Home() {
                 src={slide1}
                 alt=""
               />
-              <div className="absolute z-10 inset-0 bg-gradient-to-b from-black/50 to-black/30" />
+              {/* <div className="absolute z-10 inset-0 bg-gradient-to-b from-black/50 to-black/30" /> */}
 
               <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-[1000] bottom-[10vh] left-1/2 transform -translate-x-1/2">
                 <div className="">
@@ -279,5 +280,6 @@ export default function Home() {
         <PeopleSlider />
       </div>
     </div>
+    </>
   );
 }

@@ -99,7 +99,6 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#ffffff" />
         </Head>
         <body className="overflow-y-scroll scrollbar-hide">
-          {/* className="overflow-y-scroll scrollbar-hide"> */}
           <Main />
           <NextScript />
         </body>
