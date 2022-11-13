@@ -27,13 +27,13 @@ export default function TestimonialsSlider() {
       <div className="py-32 md:px-12">
         <div>
           <div className="max-w-screen-xl mx-auto px-6 sm:px-8">
-            <h3 className="text-4xl text-black/80 font-semibold mb-8">
+            <h3 className="text-4xl text-center lg:text-left text-black/80 font-semibold mb-8">
               Students Ki Zubaani
             </h3>
             <Swiper
               slidesPerView={1}
               modules={[Autoplay]}
-              spaceBetween={20}              
+              spaceBetween={20}
               autoplay={{
                 delay: 2000,
               }}
@@ -58,10 +58,10 @@ export default function TestimonialsSlider() {
                 },
                 1280: {
                   slidesPerView: 4,
-                }
+                },
               }}
             >
-              <SwiperSlide>
+              <SwiperSlide className="flex justify-center sm:justify-start">
                 <div className="max-w-[280px]">
                   <div>
                     <Image
@@ -88,7 +88,7 @@ export default function TestimonialsSlider() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className="flex justify-center sm:justify-start">
                 <div className="max-w-[280px]">
                   <div>
                     <Image
@@ -115,7 +115,7 @@ export default function TestimonialsSlider() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className="flex justify-center sm:justify-start">
                 <div className="max-w-[280px]">
                   <div>
                     <Image
@@ -142,7 +142,7 @@ export default function TestimonialsSlider() {
                   </div>
                 </div>
               </SwiperSlide>
-              <SwiperSlide>
+              <SwiperSlide className="flex justify-center sm:justify-start">
                 <div className="max-w-[280px]">
                   <div>
                     <Image

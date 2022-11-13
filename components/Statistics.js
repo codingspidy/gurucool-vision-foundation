@@ -15,7 +15,7 @@ export default function Statistics() {
                     scrollSpyOnce={true}
                     end={75}
                   />
-                  <span className="absolute top-0 left-12 lg:left-[75px]">
+                  <span className="absolute top-0 left-11 lg:left-[75px]">
                     billion
                   </span>
                 </div>
@@ -30,7 +30,7 @@ export default function Statistics() {
                     scrollSpyOnce={true}
                     end={350}
                   />
-                  <span className="absolute top-0 left-[45px] lg:left-[70px]">
+                  <span className="absolute top-0 left-[40px] lg:left-[70px]">
                     +
                   </span>
                 </div>
@@ -47,7 +47,7 @@ export default function Statistics() {
                     scrollSpyOnce={true}
                     end={120}
                   />
-                  <span className="absolute top-0 left-[44px] lg:left-16">
+                  <span className="absolute top-0 left-[37px] lg:left-16">
                     million
                   </span>
                 </div>
@@ -62,7 +62,7 @@ export default function Statistics() {
                     decimals={1}
                     end={0.9}
                   />
-                  <span className="absolute top-0 left-[54px] lg:left-[80px]">
+                  <span className="absolute top-0 left-[46px] lg:left-[80px]">
                     %
                   </span>
                 </div>

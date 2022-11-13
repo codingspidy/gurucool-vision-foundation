@@ -23,6 +23,7 @@ import person10 from "../images/person10.jpg";
 export default function PeopleSliderMobile() {
   return (
     <div id="peopleSlider-mobile">
+    <h3 className="text-3xl text-white lg:text-5xl text-center font-semibold mb-8">People behind the scenes❤️</h3>
       <Swiper
         effect={"cards"}
         modules={[EffectCards, Autoplay]}
