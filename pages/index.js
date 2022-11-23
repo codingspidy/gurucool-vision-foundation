@@ -281,13 +281,13 @@ export default function Home() {
 
 
         {/* <ChildReview /> */}
-        <div className="block px-4 py-32">
+        <div className="block lg:hidden px-4 py-32 bg-white">
           <PeopleSliderMobile />
         </div>
 
-        {/* <div className="hidden lg:block">
+        <div className="hidden lg:block">
           <PeopleSlider />
-        </div> */}
+        </div>
 
         <Footer />
       </div>
