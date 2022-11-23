@@ -10,12 +10,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
-
-import person1 from "../images/harry.png";
-import person2 from "../images/luna.jpeg";
-import person3 from "../images/hermione.jpeg";
 import person4 from "../images/draco.png";
-import person5 from "../images/ron.jpeg";
 import Image from "next/image";
 import organicShape from "../images/organic-shape2.png";
 import bacha from "../images/bacha.png";

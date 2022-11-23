@@ -21,6 +21,9 @@ import PeopleSlider from "../components/PeopleSlider";
 import ChildReview from "../components/ChildReview";
 import testimonialsBG from "../images/testimonials-bg.jpg";
 import bacha from "../images/bacha.png";
+import Achievements from "../components/Achievements";
+import Footer from "../components/Footer";
+import ImpactHighlights from "../components/ImpactHighlights";
 
 export default function Home() {
   const [showModal1, setShowModal1] = useState(false);
@@ -43,7 +46,8 @@ export default function Home() {
               showThumbs={false}
               interval={5000}
             >
-              <div>
+              <div className="text-left relative">
+                <div className="overlay-gradient-b absolute inset-0 z-10" />
                 <Image
                   width={1200}
                   height={500}
@@ -51,9 +55,7 @@ export default function Home() {
                   src={slide1}
                   alt=""
                 />
-                {/* <div className="absolute z-10 inset-0 bg-gradient-to-b from-black/50 to-black/30" /> */}
-
-                <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-[1000] bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
                   <div className="">
                     <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                       SUPER GIRLS K INITIATIVE
@@ -66,14 +68,15 @@ export default function Home() {
                     </p>
                     <Link
                       href=""
-                      className="bg-primary font-medium text-white text-sm py-2 px-6 relatve z-[1000]"
+                      className="bg-primary font-medium text-white text-sm py-2 px-6 relatve"
                     >
                       READ MORE
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left relative">
+                <div className="overlay-gradient-b absolute inset-0 z-10" />
                 <Image
                   width={1200}
                   height={500}
@@ -81,7 +84,7 @@ export default function Home() {
                   src={slide2}
                   alt=""
                 />
-                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
                   <div className="">
                     <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                       SOMETHING ELSE
@@ -94,14 +97,15 @@ export default function Home() {
                     </p>
                     <Link
                       href=""
-                      className="bg-primary font-medium text-white text-sm py-2 px-6 relative z-[1000]"
+                      className="bg-primary font-medium text-white text-sm py-2 px-6 relative"
                     >
                       READ MORE
                     </Link>
                   </div>
                 </div>
               </div>
-              <div className="text-left">
+              <div className="text-left relative">
+                <div className="overlay-gradient-b absolute inset-0 z-10" />
                 <Image
                   width={1200}
                   height={500}
@@ -109,7 +113,7 @@ export default function Home() {
                   src={slide3}
                   alt=""
                 />
-                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
                   <div className="">
                     <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                       SOMETHING ELSE ELSE
@@ -122,7 +126,7 @@ export default function Home() {
                     </p>
                     <Link
                       href=""
-                      className="bg-primary text-white font-medium text-sm py-2 px-6 relative z-[1000]"
+                      className="bg-primary text-white font-medium text-sm py-2 px-6 relative"
                     >
                       READ MORE
                     </Link>
@@ -130,13 +134,12 @@ export default function Home() {
                 </div>
               </div>
             </Carousel>
-            <div className="overlay-gradient-b absolute inset-0 z-50" />
           </div>
         </section>
         <section id="description">
           <div className="py-32 px-4 max-w-screen-lg mx-auto">
-            <div className="mb-10">
-              <div className="text-light-gray text-3xl lg:text-4xl max-w-[800px] leading-normal">
+            <div className="mb-8 lg:mb-10">
+              <div className="text-light-gray text-2xl lg:text-4xl max-w-[800px]">
                 Feeding India by Zomato is a{" "}
                 <span className="font-semibold text-black">
                   not for profit organization
@@ -146,9 +149,9 @@ export default function Home() {
                 among underserved communities in India
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row gap-5 mb-8">
-              <div className="text-xl lg:text-2xl max-w-lg text-gray-600">
-                <p className="mb-6">
+            <div className="flex flex-col md:flex-row gap-5 mb-6 lg:mb-8">
+              <div className="text-lg lg:text-2xl max-w-lg text-gray-600">
+                <p className="mb-4 lg:mb-6">
                   In January 2019, Zomato and Feeding India (registered as
                   Hunger Heroes) collaborated to eradicate hunger and
                   malnutrition in India.
@@ -163,7 +166,7 @@ export default function Home() {
               </div>
               <div>
                 <Image
-                  className="rounded-lg max-w-[410px] h-72 w-full object-cover"
+                  className="rounded-lg min-w-[300px] max-w-[410px] h-72 w-full object-cover"
                   width={500}
                   height={300}
                   src={slide2}
@@ -171,15 +174,17 @@ export default function Home() {
                 />
               </div>
             </div>
-            <Link href="" className="text-primary text-xl lg:text-2xl">
+            <Link href="" className="text-primary text-lg lg:text-xl">
               <span>Know more</span>
               <i className="fa-solid fa-chevron-right text-base ml-2"></i>
             </Link>
           </div>
         </section>
 
+        <Statistics />
+     
         <section id="sairaVideo">
-          <div className={`py-40 px-4 bg-[#F9c933] relative min-h-[500px]`}>
+          <div className={`py-40 px-4 bg-[#FFC900] relative min-h-[500px]`}>
             <div
               onClick={() => setShowModal1(true)}
               className="text hidden lg:block absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -198,7 +203,7 @@ export default function Home() {
                 <div
                   onClick={modal1Handler}
                   ref={modal1}
-                  className="justify-center px-4 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none"
+                  className="justify-center px-4 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[100] outline-none focus:outline-none"
                 >
                   <div className="relative w-auto my-6 mx-auto max-w-3xl">
                     <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -252,7 +257,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-b lg:bg-gradient-to-b to-[#F9c933] from-transparent absolute inset-0 z-20" />
+              <div className="bg-gradient-to-b lg:bg-gradient-to-b to-[#FFC900] from-transparent absolute inset-0 z-20" />
 
               <div className="absolute md:left-[18vw] bottom-0 w-full rounded-full ">
                 <Image
@@ -267,21 +272,24 @@ export default function Home() {
           </div>
         </section>
 
-        <TestimonialsSlider />
-
+        <ImpactHighlights />
+        <Achievements />
         <ChildReview />
+       
 
-        <CampaignSlider />
-        <Statistics />
+        
+
 
         {/* <ChildReview /> */}
-        <div className="block lg:hidden px-4 py-32 bg-black">
+        <div className="block px-4 py-32">
           <PeopleSliderMobile />
         </div>
 
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <PeopleSlider />
-        </div>
+        </div> */}
+
+        <Footer />
       </div>
     </>
   );

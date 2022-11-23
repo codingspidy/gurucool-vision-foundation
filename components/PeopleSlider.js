@@ -14,7 +14,7 @@ import person10 from "../images/person10.jpg";
 
 export default function PinterestSlider() {
   useEffect(() => {
-    const grids = document.querySelectorAll('.grid');
+    const grids = document.querySelectorAll('.peopleSlider-grid');
     const headings = document.querySelectorAll('.heading .wrapper .text');
     const dots = document.querySelectorAll('.heading .wrapper .dots ul li .dot');
     // const arrowScrollDowns = document.querySelectorAll(
@@ -219,7 +219,7 @@ export default function PinterestSlider() {
         </div>
 
         <div className="grid-container h-screen">
-          <div className="grid">
+          <div className="peopleSlider-grid">
             <div className="column animate-before">
               <div className="item">
                 <Image
@@ -361,7 +361,7 @@ export default function PinterestSlider() {
               </div>
             </div>
           </div>
-          <div className="grid">
+          <div className="peopleSlider-grid">
             <div className="column animate-before">
               <div className="item">
                 <Image
@@ -503,7 +503,7 @@ export default function PinterestSlider() {
               </div>
             </div>
           </div>
-          <div className="grid">
+          <div className="peopleSlider-grid">
             <div className="column animate-before">
               <div className="item">
                 <Image
@@ -645,7 +645,7 @@ export default function PinterestSlider() {
               </div>
             </div>
           </div>
-          <div className="grid">
+          <div className="peopleSlider-grid">
             <div className="column animate-before">
               <div className="item">
                 <Image

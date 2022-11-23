@@ -75,7 +75,7 @@ export default function Navbar() {
               <Link
                 className="text-base font-medium hover:text-primary inline-block"
                 onClick={handleToggle}
-                href="/work"
+                href="/impact"
               >
                 OUR WORK
               </Link>
