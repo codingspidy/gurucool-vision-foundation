@@ -15,7 +15,7 @@ export default function IntroSlider() {
   const swiperPagination = useRef(null);
 
   return (
-    <section id="testimonialsSlider">
+    <section id="introSlider">
       <div className="">
         <div>
           <div className="">
@@ -44,7 +44,7 @@ export default function IntroSlider() {
                     src={slide1}
                     alt=""
                   />
-                  <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                  <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
                       <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SUPER GIRLS K INITIATIVE
@@ -75,7 +75,7 @@ export default function IntroSlider() {
                     src={slide2}
                     alt=""
                   />
-                  <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                  <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
                       <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SOMETHING ELSE
@@ -106,7 +106,7 @@ export default function IntroSlider() {
                     src={slide3}
                     alt=""
                   />
-                  <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
+                  <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
                       <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SOMETHING ELSE ELSE
