@@ -24,6 +24,8 @@ import bacha from "../images/bacha.png";
 import Achievements from "../components/Achievements";
 import Footer from "../components/Footer";
 import ImpactHighlights from "../components/ImpactHighlights";
+import Contact from "../components/Contact";
+import IntroSlider from "../components/IntroSlider";
 
 export default function Home() {
   const [showModal1, setShowModal1] = useState(false);
@@ -38,102 +40,7 @@ export default function Home() {
       <div>
         <section id="intro">
           <div className="w-full relative">
-            <Carousel
-              autoPlay
-              infiniteLoop
-              showStatus={false}
-              showIndicators={false}
-              showThumbs={false}
-              interval={5000}
-            >
-              <div className="text-left relative">
-                <div className="overlay-gradient-b absolute inset-0 z-10" />
-                <Image
-                  width={1200}
-                  height={500}
-                  className="w-full h-screen object-cover"
-                  src={slide1}
-                  alt=""
-                />
-                <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
-                  <div className="">
-                    <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
-                      SUPER GIRLS K INITIATIVE
-                    </h2>
-                  </div>
-                  <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                    <p className="text-lg font-medium text-white">
-                      aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
-                      eoje xekkeipo x rjporje eur riir1hrpt r1u2r
-                    </p>
-                    <Link
-                      href=""
-                      className="bg-primary font-medium text-white text-sm py-2 px-6 relatve"
-                    >
-                      READ MORE
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="text-left relative">
-                <div className="overlay-gradient-b absolute inset-0 z-10" />
-                <Image
-                  width={1200}
-                  height={500}
-                  className="w-full h-screen object-cover"
-                  src={slide2}
-                  alt=""
-                />
-                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
-                  <div className="">
-                    <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
-                      SOMETHING ELSE
-                    </h2>
-                  </div>
-                  <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                    <p className="text-lg font-medium text-white">
-                      aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
-                      eoje xekkeipo x rjporje eur riir1hrpt r1u2r
-                    </p>
-                    <Link
-                      href=""
-                      className="bg-primary font-medium text-white text-sm py-2 px-6 relative"
-                    >
-                      READ MORE
-                    </Link>
-                  </div>
-                </div>
-              </div>
-              <div className="text-left relative">
-                <div className="overlay-gradient-b absolute inset-0 z-10" />
-                <Image
-                  width={1200}
-                  height={500}
-                  className="w-full h-screen object-cover"
-                  src={slide3}
-                  alt=""
-                />
-                <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[10vh] left-1/2 transform -translate-x-1/2">
-                  <div className="">
-                    <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
-                      SOMETHING ELSE ELSE
-                    </h2>
-                  </div>
-                  <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                    <p className="text-lg font-medium text-white">
-                      aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
-                      eoje xekkeipo x rjporje eur riir1hrpt r1u2r
-                    </p>
-                    <Link
-                      href=""
-                      className="bg-primary text-white font-medium text-sm py-2 px-6 relative"
-                    >
-                      READ MORE
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </Carousel>
+            <IntroSlider />
           </div>
         </section>
         <section id="description">
@@ -182,7 +89,7 @@ export default function Home() {
         </section>
 
         <Statistics />
-     
+
         <section id="sairaVideo">
           <div className={`py-40 px-4 bg-[#FFC900] relative min-h-[500px]`}>
             <div
@@ -275,12 +182,7 @@ export default function Home() {
         <ImpactHighlights />
         <Achievements />
         <ChildReview />
-       
 
-        
-
-
-        {/* <ChildReview /> */}
         <div className="block lg:hidden px-4 py-32 bg-white">
           <PeopleSliderMobile />
         </div>
@@ -288,7 +190,7 @@ export default function Home() {
         <div className="hidden lg:block">
           <PeopleSlider />
         </div>
-
+        <Contact />
         <Footer />
       </div>
     </>
