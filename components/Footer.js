@@ -54,9 +54,9 @@ export default function Footer() {
         <div className="flex flex-col items-center footer-links mt-20 md:mt-10 text-xs md:text-sm">
           <div className="px-2 py-4">❤️2020 | Make a difference</div>
           <div>
-            <ul className="flex flex-col md:flex-row flex-wrap">
+            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
               <li>
-                <a>FCRA Registration</a>
+                <a className="first">FCRA Registration</a>
               </li>
               <li>
                 <a>FCRA Registration</a>
@@ -76,9 +76,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <ul className="flex flex-col md:flex-row flex-wrap">
+            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
               <li>
-                <a>FCRA Registration</a>
+                <a className="first">FCRA Registration</a>
               </li>
               <li>
                 <a>FCRA Registration</a>
@@ -98,9 +98,9 @@ export default function Footer() {
             </ul>
           </div>
           <div>
-            <ul className="flex flex-col md:flex-row flex-wrap">
+            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
               <li>
-                <a>FCRA Registration</a>
+                <a className="first">FCRA Registration</a>
               </li>
               <li>
                 <a>FCRA Registration</a>

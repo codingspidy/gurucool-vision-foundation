@@ -788,8 +788,8 @@ export default function PinterestSlider() {
             </div>
           </div>
         </div>
+        <div className="absolute bottom-4 w-full h-12 bg-gradient-to-t from-white to-transparent" />
         <div className="absolute bottom-0 w-full h-4 bg-white" />
-        <div className="absolute bottom-4 w-full h-20 bg-gradient-to-t from-white to-transparent" />
       </div>
     </section>
   );

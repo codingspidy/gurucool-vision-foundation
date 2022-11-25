@@ -261,9 +261,14 @@ $columns-transition-delay: 0.2s;
 .footer-links {
   & > div li {
     padding: 16px 8px;
-    a {
+    a:not(.first) {
       padding-left: 8px;
-      border-left: 1px solid #fff;
+    }
+
+    @media (min-width: 640px) {
+      a:not(.first) {
+        border-left: 1px solid #fff;
+      }
     }
   }
 }
