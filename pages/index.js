@@ -183,7 +183,7 @@ export default function Home() {
         <Achievements />
         <ChildReview />
 
-        <div className="px-4 py-32 bg-white">
+        <div className="block lg:hidden px-4 py-32 bg-white">
           <PeopleSliderMobile />
         </div>
 
