@@ -84,7 +84,7 @@ const Contact: NextPage = () => {
               </h3>
               <p className="text-black">
                 Have questions or need to report an issue with a Gurucool
-                product or service? We've got you covered.
+                product or service? We&#39;ve got you covered.
               </p>
               <ul className="mt-6 ">
                 <li className="mb-4">
@@ -125,7 +125,7 @@ const Contact: NextPage = () => {
             <div className="">
               <p className="text-[#444444] text-lg font-medium mb-4">
                 Have questions or need to report an issue with a Gurucool
-                product or service? We've got you covered.
+                product or service? We&#39;ve got you covered.
               </p>
               <div className="mb-3">
                 <input
@@ -215,7 +215,7 @@ const Contact: NextPage = () => {
               <span className="text-yellow block my-6 text-base">
                 {formSent && (
                   <>
-                    You're response has been saved! Our team will reach out to
+                    You&#39;re response has been saved! Our team will reach out to
                     you soon.
                   </>
                 )}
