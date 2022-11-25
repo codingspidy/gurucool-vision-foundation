@@ -13,7 +13,7 @@ export default function Achievements() {
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center">
                 <i className="fa-sharp fa-solid fa-paper-plane-top text-white text-xl -rotate-90"></i>
-                <div className="h-12 md:h-6 w-[3px] bg-white" />
+                <div className="h-12 md:h-6 border-r-[3px] border-dashed border-white" />
               </div>
             </div>
 
