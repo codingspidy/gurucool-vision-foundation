@@ -5,7 +5,7 @@ export default function Achievements() {
     >
       {/* <div className="absolute inset-0 " /> */}
       <div className="relative z-50">
-        <h3 className="text-white text-4xl px-12 font-semibold mb-20 max-w-screen-lg mx-auto">
+        <h3 className="text-white text-4xl md:px-12 font-semibold mb-16 max-w-screen-lg mx-auto">
           <span>OUR</span> <span className="text-primary">ACHIEVEMENTS</span>
         </h3>
         <div className="sm:ml-[5vw] md:ml-[15vw] lg:ml-[47vw] xl:ml-[48vw]">
