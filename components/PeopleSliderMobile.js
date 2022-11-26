@@ -161,7 +161,7 @@ export default function PeopleSliderMobile() {
   });
 
   return (
-    <section id="peopleSlider-mob">
+    <section className="" id="peopleSlider-mob">
       <div className="relative bg-white">
         <div className="heading">
           <span className="text">Get your next</span>

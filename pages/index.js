@@ -17,13 +17,14 @@ import Statistics from "../components/Statistics";
 import PeopleSliderMobile from "../components/PeopleSliderMobile";
 import PeopleSlider from "../components/PeopleSlider";
 import ChildReview from "../components/ChildReview";
-import testimonialsBG from "../images/testimonials-bg.jpg";
+import testimonialsBG from "../images/testimonialsBg.png";
 import bacha from "../images/bacha.png";
 import Achievements from "../components/Achievements";
 import Footer from "../components/Footer";
 import ImpactHighlights from "../components/ImpactHighlights";
 import Contact from "../components/Contact";
 import IntroSlider from "../components/IntroSlider";
+import useMediaQuery from "../hooks/useMediaQuery";
 
 export default function Home() {
   const [showModal1, setShowModal1] = useState(false);
@@ -32,6 +33,8 @@ export default function Home() {
     if (modal1.current !== e.target) return;
     setShowModal1(false);
   };
+
+  let screenLg = useMediaQuery("(min-width: 800px)");
 
   return (
     <>
@@ -181,13 +184,16 @@ export default function Home() {
         <Achievements />
         <ChildReview />
 
-        <div className="block lg:hidden px-4 py-32 bg-white">
-          <PeopleSliderMobile />
-        </div>
+        {screenLg ? (
+          <div className="hidden lg:block">
+            <PeopleSlider />
+          </div>
+        ) : (
+          <div className="block lg:hidden px-4 py-32 bg-white">
+            <PeopleSliderMobile />
+          </div>
+        )}
 
-        <div className="hidden lg:block">
-          <PeopleSlider />
-        </div>
         <Contact />
         <Footer />
       </div>
