@@ -6,7 +6,7 @@ import { useState } from "react";
 import { TiInfo } from "react-icons/ti";
 // import {strapi_end_point} from '../config';
 // import {validateEmail} from '../utils/input-validation';
-const Contact: NextPage = () => {
+const ContactForm: NextPage = () => {
   const [userName, setUserName] = useState<string>("");
   const [userEmail, setUserEmail] = useState<string>("");
   const [userContact, setUserContact] = useState<string>("");
@@ -249,4 +249,4 @@ const Contact: NextPage = () => {
   );
 };
 
-export default Contact;
+export default ContactForm;

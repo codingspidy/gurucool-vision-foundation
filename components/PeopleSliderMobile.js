@@ -161,14 +161,14 @@ export default function PeopleSliderMobile() {
   });
 
   return (
-    <section className="" id="peopleSlider-mob">
+    <section className="pt-48" id="peopleSlider-mob">
       <div className="relative bg-white">
         <div className="heading">
           <span className="text">Get your next</span>
           <div className="wrapper">
             <div className="offset">
               <h2 className="text text-blue animate-before">
-                chai time snacks idea
+                chai snacks
               </h2>
             </div>
             <div className="offset">
@@ -362,7 +362,7 @@ export default function PeopleSliderMobile() {
                 <Image
                   className="object-cover"
                   width={236}
-                  height={350}
+                  he
                   src={slide1}
                   alt="Home 1"
                 />
@@ -408,8 +408,6 @@ export default function PeopleSliderMobile() {
             </div>
           </div>
         </div>
-        {/* <div className="absolute bottom-0 w-full h-4 bg-white" />
-        <div className="absolute bottom-4 w-full h-20 bg-gradient-to-t from-white to-transparent" /> */}
       </div>
     </section>
   );

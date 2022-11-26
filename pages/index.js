@@ -22,7 +22,7 @@ import bacha from "../images/bacha.png";
 import Achievements from "../components/Achievements";
 import Footer from "../components/Footer";
 import ImpactHighlights from "../components/ImpactHighlights";
-import Contact from "../components/Contact";
+import Contact from "../components/ContactForm";
 import IntroSlider from "../components/IntroSlider";
 import useMediaQuery from "../hooks/useMediaQuery";
 
@@ -34,7 +34,7 @@ export default function Home() {
     setShowModal1(false);
   };
 
-  let screenLg = useMediaQuery("(min-width: 800px)");
+  let screenLg = useMediaQuery("(min-width: 1024px)");
 
   return (
     <>
@@ -189,12 +189,10 @@ export default function Home() {
             <PeopleSlider />
           </div>
         ) : (
-          <div className="block lg:hidden px-4 py-32 bg-white">
+          <div className="block lg:hidden px-4 pt-32 pb-16 bg-white">
             <PeopleSliderMobile />
           </div>
         )}
-
-        <Contact />
         <Footer />
       </div>
     </>

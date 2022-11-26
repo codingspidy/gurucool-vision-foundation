@@ -380,7 +380,7 @@ $columns-transition-delay: 0.2s;
 
 .heading {
   position: absolute;
-  top: 25%;
+  top: -30%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -388,16 +388,16 @@ $columns-transition-delay: 0.2s;
   align-items: center;
   text-align: center;
 
-  // @media (max-width: 1300px) {
-  //   margin-top: 0px;
-  // }
+  @media (min-width: 1024px) {
+    top: 25%;
+  }
 
   .text {
     font-size: 60px;
     font-weight: 600;
     white-space: nowrap;
 
-    @media (max-width: 400px) {
+    @media (max-width: 1024px) {
       font-size: 38px;
     }
   }
@@ -414,7 +414,7 @@ $columns-transition-delay: 0.2s;
     }
 
     .text {
-      white-space: wrap;
+      white-space: nowrap !important;
       transition-duration: $fade-duration;
     }
 
@@ -438,7 +438,7 @@ $columns-transition-delay: 0.2s;
       z-index: 1;
 
       position: absolute;
-      top: 100px;
+      top: 75px;
       left: 0;
 
       transform: translateX(-50%);
@@ -484,36 +484,44 @@ $columns-transition-delay: 0.2s;
         }
       }
     }
+
+    @media (min-width: 1024px) {
+      .dots {
+        top: 100px;
+      }
+    }
   }
 }
 
 #peopleSlider-mob {
   .column {
-    margin-top: 0;
+    margin-top: 0 !important;
   }
-
+@media (min-width: 768px) {
+  .column {
+    flex-wrap: wrap;
+  }
+}
   .grid-container {
     height: 100vh;
     width: 100%;
-    justify-content: end;
-    align-items: center;
   }
   .peopleSlider-grid {
     width: 100%;
     display: grid;
     gap: 15px;
     grid-template-columns: repeat(2, 150px);
+    justify-content: center;
   }
   .itemDiff {
     width: 150px;
-    height: 300px;
-    margin-bottom: 15px;
-    margin-top: 0;
+    height: 315px;
+    margin-top: 15px;
     border-radius: 10px;
 
     img {
       width: 150px;
-      height: 300px;
+      height: 315px;
 
       border-radius: 10px;
     }
@@ -522,8 +530,7 @@ $columns-transition-delay: 0.2s;
   .item {
     width: 150px;
     height: 150px;
-    margin-top: 0;
-    margin-bottom: 15px;
+    margin-top: 15px ;
     border-radius: 10px;
 
     img {
@@ -531,6 +538,31 @@ $columns-transition-delay: 0.2s;
       height: 150px;
 
       border-radius: 10px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .peopleSlider-grid {
+      grid-template-columns: repeat(2, 200px);
+    }
+
+    .itemDiff {
+      width: 200px;
+      // height: ;
+  
+      img {
+        width: 200px;
+        // height: ;
+      }
+    }
+  
+    .item {
+      width: 200px;
+      height: 200px;
+      img {
+        width: 200px;
+        height: 200px;
+      }
     }
   }
 }
