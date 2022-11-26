@@ -18,11 +18,21 @@ export default function Footer() {
               />
             </Link>
             <div className="flex gap-5 px-10 items-center text-lg sm:text-2xl">
-              <i className="fa-brands fa-facebook-f"></i>
-              <i className="fa-brands fa-instagram"></i>
-              <i className="fa-brands fa-youtube"></i>
-              <i className="fa-brands fa-twitter"></i>
-              <i className="fa-brands fa-linkedin-in"></i>
+              <Link href="">
+                <i className="fa-brands fa-facebook-f"></i>
+              </Link>
+              <Link href="">
+                <i className="fa-brands fa-instagram"></i>
+              </Link>
+              <Link href="">
+                <i className="fa-brands fa-youtube"></i>
+              </Link>
+              <Link href="">
+                <i className="fa-brands fa-twitter"></i>
+              </Link>
+              <Link href="">
+                <i className="fa-brands fa-linkedin-in"></i>
+              </Link>
             </div>
             <div className="h-40 w-[1px] bg-white hidden md:block" />
           </div>

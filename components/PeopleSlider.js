@@ -19,15 +19,9 @@ export default function PinterestSlider() {
     const dots = document.querySelectorAll(
       ".heading .wrapper .dots ul li .dot"
     );
-    // const arrowScrollDowns = document.querySelectorAll(
-    //   '.page-scroll-arrow-bottom .arrow-button',
-    // );
 
-    // const pageScrollArrowDown = document.querySelector('.page-scroll-arrow-bottom');
     const modalOverlaySignUp = document.querySelector(".modal-overlay");
     const footer = document.querySelector("footer");
-
-    // const arrowScrollDown = arrowScrollDowns[0];
 
     const dotsColorsClasses = [
       "dot-blue",
@@ -35,13 +29,6 @@ export default function PinterestSlider() {
       "dot-yellow",
       "dot-green-dark",
     ];
-
-    // const arrowScrollDownColorsClasses = [
-    //   'arrow-scroll-down-blue',
-    //   'arrow-scroll-down-green-light',
-    //   'arrow-scroll-down-yellow',
-    //   'arrow-scroll-down-green-dark',
-    // ];
 
     function enterScreen(index) {
       const grid = grids[index];
@@ -58,14 +45,7 @@ export default function PinterestSlider() {
       heading.classList.remove("animate-before", "animate-after");
 
       dot.classList.add(dotsColorsClasses[index]);
-
-      // arrowScrollDown.classList.remove(
-      //   'arrow-scroll-down-blue',
-      //   'arrow-scroll-down-green-light',
-      //   'arrow-scroll-down-yellow',
-      //   'arrow-scroll-down-green-dark',
-      // );
-      // arrowScrollDown.classList.add(arrowScrollDownColorsClasses[index]);
+     
     }
 
     function exitScreen(index, exitDelay) {
@@ -173,11 +153,6 @@ export default function PinterestSlider() {
       }
     }
 
-    // eslint-disable-next-line
-    function mouseWheelEvent(event) {
-      const direction = detectMouseWheelDirection(event);
-      moveTransform(direction);
-    }
   });
 
   return (

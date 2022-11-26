@@ -86,7 +86,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse1}
             className={`child-1 group flex justify-center items-center transition-all duration-200 ${
               item1
-                ? "bg-[#F2B90C] text-black w-[255px] h-[255px] col-span-2 row-span-2"
+                ? "bg-primary text-black w-[255px] h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -102,7 +102,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse2}
             className={`child-2 group flex justify-center items-center transition-all duration-200 ${
               item2
-                ? "bg-[#F2B90C] text-black w-[255px] h-[255px] col-span-2 row-span-2"
+                ? "bg-primary text-black w-[255px] h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -118,7 +118,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse3}
             className={`child-3 group flex justify-center items-center transition-all duration-200 ${
               item3
-                ? "bg-[#F2B90C] w-[255px] text-black h-[255px] col-span-2 row-span-2"
+                ? "bg-primary w-[255px] text-black h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -134,7 +134,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse4}
             className={`child-4 group flex justify-center items-center transition-all duration-200 ${
               item4
-                ? "bg-[#F2B90C] w-[255px] text-black h-[255px] col-span-2 row-span-2"
+                ? "bg-primary w-[255px] text-black h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -150,7 +150,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse5}
             className={`child-5 group flex justify-center items-center transition-all duration-200 ${
               item5
-                ? "bg-[#F2B90C] text-black w-[255px] h-[255px] col-span-2 row-span-2"
+                ? "bg-primary text-black w-[255px] h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -166,7 +166,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse6}
             className={`child-6 group flex justify-center items-center transition-all duration-500 ${
               item6
-                ? "bg-[#F2B90C] text-black w-[255px] h-[255px] col-span-2 row-span-2"
+                ? "bg-primary text-black w-[255px] h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >
@@ -182,7 +182,7 @@ export default function ImpactHighlights() {
             onMouseEnter={handleMouse7}
             className={`child-7 group flex justify-center items-center transition-all duration-500 ${
               item7
-                ? "bg-[#F2B90C] text-black w-[255px] h-[255px] col-span-2 row-span-2"
+                ? "bg-primary text-black w-[255px] h-[255px] col-span-2 row-span-2"
                 : "w-[120px] h-[120px] text-white bg-[#0D0D0D]"
             }`}
           >

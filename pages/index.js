@@ -180,16 +180,17 @@ export default function Home() {
           </div>
         </section>
 
+        <ChildReview />
         <ImpactHighlights />
         <Achievements />
-        <ChildReview />
+       
 
         {screenLg ? (
-          <div className="hidden lg:block">
+          <div className="">
             <PeopleSlider />
           </div>
         ) : (
-          <div className="block lg:hidden px-4 pt-32 pb-16 bg-white">
+          <div className="px-4 pt-32 pb-16 bg-white relative">
             <PeopleSliderMobile />
           </div>
         )}
