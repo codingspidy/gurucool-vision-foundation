@@ -13,7 +13,7 @@ export default function Navbar() {
 
   return (
     <header className="bg-black w-full absolute top-0 z-[10000]">
-      <div className="flex items-center justify-between relative px-4 py-1 lg:py-0 lg:px-5 max-w-6xl lg:mx-auto">
+      <div className="flex items-center justify-between relative px-4 py-1 lg:py-0 lg:px-5 max-w-screen-xl lg:mx-auto">
         <Link
           className="w-32 h-auto lg:w-56 -mb-1 cursor-pointer p-0 py-2 lg:py-0 "
           href="/"
@@ -75,27 +75,9 @@ export default function Navbar() {
               <Link
                 className="text-base font-medium hover:text-primary inline-block"
                 onClick={handleToggle}
-                href="/impact"
+                href="/work"
               >
                 OUR WORK
-              </Link>
-              <Dropdown />
-            </li>
-            <li
-              className={
-                "py-3 lg:py-5 flex items-center gap-2 relative "
-                // +
-                // (router.pathname == "/partners"
-                //   ? "border-b-2 border-primary"
-                //   : "nonactive")
-              }
-            >
-              <Link
-                className="text-base font-medium hover:text-primary inline-block"
-                onClick={handleToggle}
-                href="/partners"
-              >
-                PARTNER WITH US
               </Link>
               <Dropdown />
             </li>
@@ -111,15 +93,16 @@ export default function Navbar() {
               <Link
                 className="text-base font-medium hover:text-primary inline-block"
                 onClick={handleToggle}
-                href="/financials"
+                href="/impact"
               >
-                FINANCIALS
+                IMPACT
               </Link>
             </li>
             <li
               className={
-                "py-3 lg:py-5"
-                // + (router.pathname == "/contact"
+                "py-3 lg:py-5 flex items-center gap-2 relative "
+                // +
+                // (router.pathname == "/partners"
                 //   ? "border-b-2 border-primary"
                 //   : "nonactive")
               }
@@ -127,9 +110,9 @@ export default function Navbar() {
               <Link
                 className="text-base font-medium hover:text-primary inline-block"
                 onClick={handleToggle}
-                href="/contact"
+                href="/financials"
               >
-                CONTACT US
+                FINANCIALS
               </Link>
             </li>
           </ul>

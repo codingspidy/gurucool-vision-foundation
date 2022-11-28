@@ -362,7 +362,6 @@ export default function PeopleSliderMobile() {
                 <Image
                   className="object-cover"
                   width={236}
-                  he
                   src={slide1}
                   alt="Home 1"
                 />

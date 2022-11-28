@@ -36,6 +36,63 @@ $columns-transition-delay: 0.2s;
   box-sizing: border-box;
 }
 
+// radial progress bar
+.circle-wrap {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+}
+.circle-wrap .circle .mask,
+.circle-wrap .circle .fill {
+  width: 68px;
+  height: 68px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.mask .fill {
+  clip: rect(0px, 34px, 68px, 0px);
+}
+
+.circle1 .mask .fill {
+  background-color: blue;
+}
+.circle2 .mask .fill {
+  background-color: aqua;
+}
+.circle3 .mask .fill {
+  background-color: red;
+}
+.circle-wrap .circle .mask {
+  clip: rect(0px, 68px, 68px, 34px);
+}
+
+.mask.full,
+.circle .fill {
+  transform: rotate(135deg);
+}
+// .circle2 .fill {
+//   transform: rotate(15deg);
+// }
+// .circle3 .fill {
+//   transform: rotate(30deg);
+// }
+
+.circle-wrap .inside-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #000000;
+  line-height: 120px;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 14px;
+  color: #ffffff;
+  position: absolute;
+  z-index: 100;
+  font-size: 13px;
+}
+
 .shadow-custom {
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
 }
@@ -45,8 +102,19 @@ $columns-transition-delay: 0.2s;
 }
 
 .overlay-gradient-l {
-  background: linear-gradient(89.8deg, #000000 11.27%, rgba(0, 0, 0, 0) 99.84%);
+  background: linear-gradient(89.8deg, #000000 7%, rgba(0, 0, 0, 0) 50%);
 }
+
+.overlay-gradient-r {
+  background: linear-gradient(-89.8deg, #000000 7%, rgba(0, 0, 0, 0) 50%);
+}
+.overlay-gradient-t {
+  background: linear-gradient(to top, #000000 11%, rgba(0, 0, 0, 0) 100%);
+}
+
+// .work-overlay-l {
+//   background: linear-gradient(89.8deg, #000000 7%, rgba(0, 0, 0, 0) 99.84%);
+// }
 
 .carousel {
   position: relative;
@@ -497,11 +565,11 @@ $columns-transition-delay: 0.2s;
   .column {
     margin-top: 0 !important;
   }
-@media (min-width: 768px) {
-  .column {
-    flex-wrap: wrap;
+  @media (min-width: 768px) {
+    .column {
+      flex-wrap: wrap;
+    }
   }
-}
   .grid-container {
     height: 100vh;
     width: 100%;
@@ -530,7 +598,7 @@ $columns-transition-delay: 0.2s;
   .item {
     width: 150px;
     height: 150px;
-    margin-top: 15px ;
+    margin-top: 15px;
     border-radius: 10px;
 
     img {
@@ -549,13 +617,13 @@ $columns-transition-delay: 0.2s;
     .itemDiff {
       width: 200px;
       // height: ;
-  
+
       img {
         width: 200px;
         // height: ;
       }
     }
-  
+
     .item {
       width: 200px;
       height: 200px;
