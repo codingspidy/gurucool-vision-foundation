@@ -1,28 +1,17 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation } from "swiper";
-import "swiper/css/navigation";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/autoplay";
-import slide1 from "../images/slide1.png";
+
 import slide2 from "../images/slide2.png";
-import slide3 from "../images/slide3.png";
-import TestimonialsSlider from "../components/TestimonialsSlider";
-import CampaignSlider from "../components/CampaignSlider";
 import { useRef, useState } from "react";
 import Statistics from "../components/Statistics";
 import PeopleSliderMobile from "../components/PeopleSliderMobile";
 import PeopleSlider from "../components/PeopleSlider";
 import ChildReview from "../components/ChildReview";
-import testimonialsBG from "../images/testimonialsBg.png";
 import bacha from "../images/bacha.png";
 import Achievements from "../components/Achievements";
 import Footer from "../components/Footer";
 import ImpactHighlights from "../components/ImpactHighlights";
-import Contact from "../components/ContactForm";
 import IntroSlider from "../components/IntroSlider";
 import useMediaQuery from "../hooks/useMediaQuery";
 

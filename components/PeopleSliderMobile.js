@@ -4,13 +4,8 @@ import slide1 from "../images/slide1.png";
 import person1 from "../images/person1.jpg";
 import person2 from "../images/person2.jpg";
 import person3 from "../images/person3.jpg";
-import person4 from "../images/person4.png";
-import person5 from "../images/person5.jpg";
 import person6 from "../images/person6.jpg";
-import person7 from "../images/person7.jpg";
 import person8 from "../images/person8.jpg";
-import person9 from "../images/person9.jpg";
-import person10 from "../images/person10.jpg";
 
 export default function PeopleSliderMobile() {
   useEffect(() => {

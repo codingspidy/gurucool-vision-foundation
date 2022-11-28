@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Impact() {
   return (
     <div>
-      <div className="w-full h-[50px] lg:h-[68px]" />
+      <div className="w-full h-[49px] lg:h-[67.5px]" />
       <section id="campaignIntro">
         <div className="relative bg-[url('../images/unicef-child.jpg')] bg-no-repeat bg-center bg-cover px-4 py-16 text-white">
           <div className="absolute inset-0 bg-black/80" />
