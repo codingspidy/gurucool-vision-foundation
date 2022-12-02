@@ -1,6 +1,7 @@
 import CampaignSlider from "../components/CampaignSlider";
 
 export default function Work() {
+
   return (
     <>
       {/* <div className="h-[50px] lg:h-[68px]" /> */}
@@ -21,7 +22,10 @@ export default function Work() {
           <div>
             <div className="text-2xl lg:text-5xl font-semibold flex items-center flex-wrap gap-2 mb-6">
               IT&#39;S
-              <p className="text-black bg-primary leading-none px-2">#NEVERTOOLATE</p> TO MAKE A DIFFERENCE
+              <p className="text-black bg-primary leading-none px-2">
+                #NEVERTOOLATE
+              </p>{" "}
+              TO MAKE A DIFFERENCE
             </div>
             <p className="text-base lg:text-xl mb-10">
               Watch this powerful, interactive video of the life of a child in
@@ -29,11 +33,11 @@ export default function Work() {
               transform outcomes.
             </p>
             <div className="flex items-center gap-3">
-            <div className="text-base lg:text-xl">Share</div>
-            <div className="w-12 h-12 rounded-full bg-blue-700" />
-            <div className="w-12 h-12 rounded-full bg-blue-500" />
-            <div className="w-12 h-12 rounded-full bg-green-500" />
-          </div>
+              <div className="text-base lg:text-xl">Share</div>
+              <div className="w-12 h-12 rounded-full bg-blue-700" />
+              <div className="w-12 h-12 rounded-full bg-blue-500" />
+              <div className="w-12 h-12 rounded-full bg-green-500" />
+            </div>
           </div>
         </div>
       </div>

@@ -1,14 +1,13 @@
 export default function Achievements() {
   return (
     <div
-      className={`bg-black bg-no-repeat bg-cover px-6 lg:px-10 py-40 relative`}
+      className={`bg-black bg-no-repeat bg-cover px-6 lg:px-10 py-40 relative -mt-1`}
     >
-      {/* <div className="absolute inset-0 " /> */}
-      <div className="relative z-50">
+      <div className="relative z-50 min-h-[700px]">
         <h3 className="text-white text-4xl md:px-12 font-semibold mb-16 max-w-screen-lg mx-auto">
           <span>OUR</span> <span className="text-primary">ACHIEVEMENTS</span>
         </h3>
-        <div className="sm:ml-[5vw] md:ml-[15vw] lg:ml-[47vw] xl:ml-[48vw]">
+        <div className="sm:ml-[5vw] md:ml-[15vw] lg:-ml-[15px] lg:absolute left-1/2">
           <div className="flex flex-col gap-1">
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center">
@@ -19,7 +18,6 @@ export default function Achievements() {
 
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -34,7 +32,6 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 relative">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -49,7 +46,6 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -64,7 +60,6 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 relative">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -79,7 +74,6 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -94,7 +88,6 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 relative">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
                 <div className="h-[100px] md:h-12 w-[3px] bg-white" />
               </div>
@@ -109,10 +102,7 @@ export default function Achievements() {
             </div>
             <div className="flex gap-5 w-full">
               <div className="flex flex-col items-center gap-[6px]">
-                {/* <div className="h-4 w-4 rounded-full bg-[#d2001a]" /> */}
                 <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i>
-                {/* <div className="h-[100px] md:h-12 w-[3px] bg-white" />
-                <i className="fa-sharp fa-solid fa-bullseye-arrow text-white text-xl"></i> */}
               </div>
               <div className="flex flex-col gap-2 -mb-1 w-full max-w-[450px] lg:flex-row lg:gap-16 lg:items-start lg:w-[500px] lg:-translate-x-24">
                 <span className="text-white tracking-widest text-xs md:text-sm">

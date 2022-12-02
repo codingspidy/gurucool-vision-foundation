@@ -10,7 +10,6 @@ import PeopleSlider from "../components/PeopleSlider";
 import ChildReview from "../components/ChildReview";
 import bacha from "../images/bacha.png";
 import Achievements from "../components/Achievements";
-import Footer from "../components/Footer";
 import ImpactHighlights from "../components/ImpactHighlights";
 import IntroSlider from "../components/IntroSlider";
 import useMediaQuery from "../hooks/useMediaQuery";
@@ -36,29 +35,40 @@ export default function Home() {
         <section id="description">
           <div className="py-32 px-4 max-w-screen-lg mx-auto">
             <div className="mb-8 lg:mb-10">
-              <div className="text-light-gray text-2xl lg:text-4xl max-w-[800px]">
-                Feeding India by Zomato is a{" "}
-                <span className="font-semibold text-black">
-                  not for profit organization
+              <div
+                className="text-gray-600 font-normal
+               text-2xl lg:text-4xl max-w-[950px] lg:leading-snug"
+              >
+                Gurucool Vision Foundation is a
+                <span className="font-medium text-black">
+                  {" "}
+                  not for profit organization,
+                </span>{" "}
+                making
+                <span className="font-medium text-black">
+                  {" "}
+                  quality education accessible
                 </span>
-                , designing interventions to{" "}
-                <span className="font-semibold text-black">reduce hunger</span>{" "}
-                among underserved communities in India
+                <span>
+                  {" "}
+                  to underprivileged children, underrepresented girls and
+                  underserved communities in India.
+                </span>
               </div>
             </div>
             <div className="flex flex-col md:flex-row gap-5 mb-6 lg:mb-8">
-              <div className="text-lg lg:text-2xl max-w-lg text-gray-600">
+              <div className="text-lg lg:text-[22px] max-w-lg text-gray-600 leading-normal">
                 <p className="mb-4 lg:mb-6">
-                  In January 2019, Zomato and Feeding India (registered as
-                  Hunger Heroes) collaborated to eradicate hunger and
-                  malnutrition in India.
+                  Since February 2019, Gurucool Vision Foundation worked on
+                  SDG-4 to ensure inclusive and equitable quality education and
+                  promote lifelong learning opportunities for all.
                 </p>
                 <p>
-                  All efforts are concerted towards providing better food to
-                  more people. Through our targeted interventions for child and
-                  maternal malnutrition, we are working towards bringing
-                  large-scale systemic transformation in the nutrition landscape
-                  of India.
+                  All efforts are made towards providing better education to
+                  more people. More than 287 million people, which is 37% of the
+                  global total, are illiterate in India. Therefore, our ed-tech
+                  social initiatives are working towards bringing large-scale
+                  systematic transformation in education landscape of India.
                 </p>
               </div>
               <div>
@@ -81,7 +91,7 @@ export default function Home() {
         <Statistics />
 
         <section id="sairaVideo">
-          <div className={`py-40 px-4 bg-[#FFC900] relative min-h-[500px]`}>
+          <div className={`py-40 px-4 bg-primary relative min-h-[500px]`}>
             <div
               onClick={() => setShowModal1(true)}
               className="text hidden lg:block absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
@@ -89,7 +99,7 @@ export default function Home() {
               <div className="play">
                 <button
                   id="playBtn"
-                  className="group-hover:border-2 group-hover:border-primary group-hover:text-primary"
+                  className=""
                 >
                   <i className="fas fa-play text-xl"></i>
                 </button>
@@ -147,14 +157,14 @@ export default function Home() {
                   <div className="play">
                     <button
                       id="playBtn"
-                      className="group-hover:border-2 group-hover:border-primary group-hover:text-primary"
+                      className=""
                     >
                       <i className="fas fa-play"></i>
                     </button>
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-b lg:bg-gradient-to-b to-[#FFC900] from-transparent absolute inset-0 z-20" />
+              <div className="bg-gradient-to-b lg:bg-gradient-to-b to-primary from-transparent absolute inset-0 z-20" />
 
               <div className="absolute md:left-[18vw] bottom-0 w-full rounded-full ">
                 <Image
@@ -172,18 +182,16 @@ export default function Home() {
         <ChildReview />
         <ImpactHighlights />
         <Achievements />
-       
 
         {screenLg ? (
           <div className="">
             <PeopleSlider />
           </div>
         ) : (
-          <div className="px-4 pt-32 pb-16 bg-white relative">
+          <div className="px-4 py-32 bg-white relative">
             <PeopleSliderMobile />
           </div>
         )}
-        <Footer />
       </div>
     </>
   );

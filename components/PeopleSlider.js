@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { useEffect } from "react";
 import slide1 from "../images/slide1.png";
 import person1 from "../images/person1.jpg";
 import person2 from "../images/person2.jpg";
@@ -12,763 +11,790 @@ import person8 from "../images/person8.jpg";
 import person9 from "../images/person9.jpg";
 import person10 from "../images/person10.jpg";
 
-export default function PinterestSlider() {
+import { Swiper, SwiperSlide } from "swiper/react";
+// import Swiper core and required modules
+import { Navigation, Pagination, Autoplay } from "swiper";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import { useEffect, useRef, useState } from "react";
+
+export default function PeopleSlider() {
+  const [activeIndex, setActiveIndex] = useState(3);
+  const swiperPagination = useRef();
+
   useEffect(() => {
-    const grids = document.querySelectorAll(".peopleSlider-grid");
-    const headings = document.querySelectorAll(".heading .wrapper .text");
-    const dots = document.querySelectorAll(
-      ".heading .wrapper .dots ul li .dot"
-    );
+    let i = setTimeout(() => {
+      setActiveIndex(10);
+    }, 4500);
 
-    const modalOverlaySignUp = document.querySelector(".modal-overlay");
-    const footer = document.querySelector("footer");
+    return () => clearTimeout(i);
+  }, [activeIndex]);
 
-    const dotsColorsClasses = [
-      "dot-blue",
-      "dot-green-light",
-      "dot-yellow",
-      "dot-green-dark",
-    ];
-
-    function enterScreen(index) {
-      const grid = grids[index];
-      const heading = headings[index];
-      const dot = dots[index];
-      const gridColumns = grid.querySelectorAll(".column");
-
-      grid.classList.add("active");
-
-      gridColumns.forEach((element) => {
-        element.classList.remove("animate-before", "animate-after");
-      });
-
-      heading.classList.remove("animate-before", "animate-after");
-
-      dot.classList.add(dotsColorsClasses[index]);
-     
-    }
-
-    function exitScreen(index, exitDelay) {
-      const grid = grids[index];
-      const heading = headings[index];
-      const dot = dots[index];
-      const gridColumns = grid.querySelectorAll(".column");
-
-      gridColumns.forEach((element) => {
-        element.classList.add("animate-after");
-      });
-
-      heading.classList.add("animate-after");
-
-      dot.classList.remove(
-        "dot-blue",
-        "dot-green-light",
-        "dot-yellow",
-        "dot-green-dark"
-      );
-
-      setTimeout(() => {
-        grid.classList.remove("active");
-
-        heading.classList.add("animate-before");
-        heading.classList.remove("animate-after");
-
-        gridColumns.forEach((element) => {
-          element.classList.add("animate-before");
-          element.classList.remove("animate-after");
-        });
-      }, exitDelay);
-    }
-
-    function setupAnimationCycle({ timePerScreen, exitDelay }) {
-      const cycleTime = timePerScreen + exitDelay;
-      let nextIndex = 0;
-
-      function nextCycle() {
-        const currentIndex = nextIndex;
-
-        enterScreen(currentIndex);
-
-        setTimeout(() => exitScreen(currentIndex, exitDelay), timePerScreen);
-
-        nextIndex = nextIndex >= grids.length - 1 ? 0 : nextIndex + 1;
-      }
-
-      setTimeout(() => {
-        nextCycle();
-        setInterval(nextCycle, cycleTime);
-      }, 500);
-    }
-
-    setupAnimationCycle({
-      timePerScreen: 3000, // ms
-      exitDelay: 300 * 7, // ms
-    });
-
-    function detectMouseWheelDirection(event) {
-      let delta = null;
-      let direction = false;
-
-      if (!event) {
-        event = window.event;
-      }
-
-      if (event.wheelDelta) {
-        delta = event.wheelDelta / 60;
-      } else if (event.detail) {
-        delta = -event.detail / 2;
-      }
-
-      if (delta !== null) {
-        direction = delta > 0 ? "up" : "down";
-      }
-
-      return direction;
-    }
-
-    let transformYActive = false;
-
-    function moveTransform(direction) {
-      if (direction === "up" && transformYActive) {
-        transformYActive = false;
-        document
-          .getElementsByTagName("body")[0]
-          .classList.remove("transform-body-bottom");
-
-        pageScrollArrowDown.style.display = "flex";
-        modalOverlaySignUp.style.display = "none";
-        footer.style.display = "none";
-      } else if (direction === "down" && !transformYActive) {
-        transformYActive = true;
-        document
-          .getElementsByTagName("body")[0]
-          .classList.add("transform-body-bottom");
-
-        pageScrollArrowDown.style.display = "none";
-
-        setTimeout(() => {
-          modalOverlaySignUp.style.display = "block";
-          footer.style.display = "block";
-        }, 1100);
-      }
-    }
-
-  });
+  const indexChangeHandler = (swiper) => {
+    console.log(swiper.realIndex);
+    setActiveIndex(swiper.realIndex);
+  };
 
   return (
-    <section className="">
-      <div className="relative">
-        <div className="heading">
-          <span className="text">Get your next</span>
-          <div className="wrapper">
-            <div className="offset">
-              <h2 className="text text-blue animate-before">
-                chai time snacks idea
-              </h2>
-            </div>
-            <div className="offset">
-              <h2 className="text text-green-light animate-before">
-                home decor idea
-              </h2>
-            </div>
-            <div className="offset">
-              <h2 className="text text-yellow animate-before">outfit idea</h2>
-            </div>
-            <div className="offset">
-              <h2 className="text text-green-dark animate-before">DIY idea</h2>
-            </div>
-            <div className="dots">
-              <ul>
-                <li>
-                  <button className="dot" />
-                </li>
-                <li>
-                  <button className="dot" />
-                </li>
-                <li>
-                  <button className="dot" />
-                </li>
-                <li>
-                  <button className="dot" />
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+    <>
+      <section id="peopleSlider-container">
+        <div className="people-gridContainer h-screen relative">
+          <h3 className="people-title text-2xl lg:text-[55px] font-semibold absolute left-1/2 -translate-x-1/2">
+            Gurucool means
+          </h3>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            initialSlide={3}
+            slidesPerView={1}
+            slidesPerGroup={1}
+            onRealIndexChange={indexChangeHandler}
+            // onBeforeSlideChangeStart={handleChange}
+            direction="vertical"
+            spaceBetween={50}
+            pagination={{
+              el:
+                swiperPagination.current ||
+                "#swiperPagination.swiper-pagination",
+              clickable: true,
+            }}
+            autoplay={{
+              delay: 6200,
+              pauseOnMouseEnter: false,
+              disableOnInteraction: false,
+              reverseDirection: true,
+            }}
+            loop={true}
+            speed={1}
+            observer={true}
+            observeParents={true}
+            allowTouchMove={false}
+          >
+            <SwiperSlide className="relative">
+              <h5
+                className={`text-[55px] font-semibold text-[#30E3CA] ${
+                  activeIndex === 0 ? "text-after" : "text-before"
+                }`}
+              >
+                coolfluencing the world
+              </h5>
+              <div className="people-grid">
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person1}
+                      alt="Look 1"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 2"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person2}
+                      alt="Look 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 6"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Look 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person4}
+                      alt="Look 8"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person5}
+                      alt="Look 3"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person6}
+                      alt="Look 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 0 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person7}
+                      alt="Look 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Look 6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="relative">
+              <h5
+                className={`text-[55px] font-semibold text-[#FC5185] ${
+                  activeIndex === 1 ? "text-after" : "text-before"
+                }`}
+              >
+                spreading love
+              </h5>
+              <div className="people-grid">
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person8}
+                      alt="Children 1"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 2"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person10}
+                      alt="Children 6"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Children 4"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 3"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Children 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 7"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Children 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 1"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Children 4"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 3"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 1 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Children 6"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Children 7"
+                    />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="relative">
+              <h5
+                className={`text-[55px] font-semibold text-[#7D5A50] ${
+                  activeIndex === 2 ? "text-after" : "text-before"
+                }`}
+              >
+                Beautiful smiles
+              </h5>
+              <div className="people-grid">
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person6}
+                      alt="Food 1"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 2"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person6}
+                      alt="Food 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 6"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person6}
+                      alt="Food 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person6}
+                      alt="Food 8"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={person3}
+                      alt="Food 3"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 2 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Food 6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide className="relative">
+              <h5
+                className={`text-[55px] font-semibold text-[#FF9A00] ${
+                  activeIndex === 3 ? "text-after" : "text-before"
+                }`}
+              >
+                Education for all
+              </h5>
+              <div className="people-grid">
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 1"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 2"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 6"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 8"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 3"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 9"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 4"
+                    />
+                  </div>
+                </div>
+                <div
+                  className={`people-column ${
+                    activeIndex === 3 ? "after-anim" : "before-anim"
+                  }`}
+                >
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 5"
+                    />
+                  </div>
+                  <div className="people-item">
+                    <Image
+                      className="object-cover"
+                      width={236}
+                      height={350}
+                      src={slide1}
+                      alt="Home 6"
+                    />
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <div id="swiperPagination" className="swiper-pagination" />
+          </Swiper>
 
-        <div className="grid-container h-screen">
-          <div className="peopleSlider-grid">
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person1}
-                  alt="Look 1"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 2"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person2}
-                  alt="Look 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 6"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Look 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person4}
-                  alt="Look 8"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person5}
-                  alt="Look 3"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person6}
-                  alt="Look 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person7}
-                  alt="Look 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Look 6"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="peopleSlider-grid">
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person8}
-                  alt="Children 1"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 2"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person10}
-                  alt="Children 6"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 7"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Children 4"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 3"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Children 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 7"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Children 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 1"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Children 4"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 3"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Children 6"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Children 7"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="peopleSlider-grid">
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person6}
-                  alt="Food 1"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 2"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person6}
-                  alt="Food 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 6"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person6}
-                  alt="Food 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person6}
-                  alt="Food 8"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={person3}
-                  alt="Food 3"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Food 6"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="peopleSlider-grid">
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 1"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 2"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 6"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 8"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 3"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 9"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 4"
-                />
-              </div>
-            </div>
-            <div className="column animate-before">
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 5"
-                />
-              </div>
-              <div className="item">
-                <Image
-                  className="object-cover"
-                  width={236}
-                  height={350}
-                  src={slide1}
-                  alt="Home 6"
-                />
-              </div>
-            </div>
-          </div>
+          <div className="absolute bottom-4 z-50 w-full h-20 bg-gradient-to-t from-white to-transparent" />
+          <div className="absolute bottom-0 z-50 w-full h-4 bg-white" />
         </div>
-        <div className="absolute bottom-4 w-full h-20 bg-gradient-to-t from-white to-transparent" />
-        <div className="absolute bottom-0 w-full h-4 bg-white" />
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

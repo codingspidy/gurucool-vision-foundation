@@ -13,7 +13,7 @@ import Link from "next/link";
 export default function CampaignSlider() {
   return (
     <section id="campaigns">
-      <div className="py-32 sm:py-40 px-4 bg-[#F8F8F8]">
+      <div className="py-32 sm:py-40 px-4 bg-light-primary">
         <div className="relative max-w-screen-lg mx-auto campaign-slider">
           <div className="max-w-[950px] mx-auto">
             <h3 className="text-4xl text-black/80 font-semibold mb-8">

@@ -83,10 +83,11 @@ export default function Impact() {
                 </div>
                 <div>
                   <Link
-                    className="py-[6px] px-12 bg-black text-sm lg:text-lg text-white"
+                    className="py-[6px] px-12 bg-black text-sm lg:text-lg text-white flex gap-3 items-center w-fit"
                     href="/"
                   >
-                    DONATE --&gt;
+                    <span>DONATE</span>
+                    <i className="fa-light fa-arrow-right-long"></i>
                   </Link>
                 </div>
               </div>
@@ -110,10 +111,11 @@ export default function Impact() {
                     </div>
                   </div>
                   <Link
-                    className="bg-primary text-black text-sm lg:text-base self-start px-10 py-1"
+                    className="bg-primary text-black font-medium text-sm lg:text-lg self-start px-10 py-[6px] flex gap-3 items-center w-fit"
                     href="/"
                   >
-                    DOWNLOAD --&gt;
+                    <span>DOWNLOAD</span>
+                    <i className="fa-light fa-arrow-right-long font-medium"></i>
                   </Link>
                 </div>
               </div>
@@ -131,9 +133,9 @@ export default function Impact() {
                     </div>
                     <div className="mb-3">FOR EVERY 100 INR, WE SPEND</div>
                     <div className="flex gap-6">
-                      <div className="circle-wrap">
-                        <div className="circle circle1">
-                          <div className="inside-circle"> PROGRAMS </div>
+                      <div className="circle-wrap circle1">
+                        <div className="circle">
+                          <div className="inside-circle" />
                           <div className="mask full">
                             <div className="fill"></div>
                           </div>
@@ -141,10 +143,13 @@ export default function Impact() {
                             <div className="fill"></div>
                           </div>
                         </div>
+                        <div className="text-xs absolute -bottom-5">
+                          PROGRAMS
+                        </div>
                       </div>
-                      <div className="circle-wrap">
-                        <div className="circle circle2">
-                          <div className="inside-circle"> FUNDRAISING</div>
+                      <div className="circle-wrap circle2">
+                        <div className="circle">
+                          <div className="inside-circle" />
                           <div className="mask full">
                             <div className="fill"></div>
                           </div>
@@ -152,16 +157,22 @@ export default function Impact() {
                             <div className="fill"></div>
                           </div>
                         </div>
+                        <div className="text-xs absolute -bottom-5">
+                          FUNDRAISING
+                        </div>
                       </div>
-                      <div className="circle-wrap">
-                        <div className="circle circle3">
-                          <div className="inside-circle"> OPERATIONS </div>
+                      <div className="circle-wrap circle3">
+                        <div className="circle">
+                          <div className="inside-circle" />
                           <div className="mask full">
                             <div className="fill"></div>
                           </div>
                           <div className="mask half">
                             <div className="fill"></div>
                           </div>
+                        </div>
+                        <div className="text-xs absolute -bottom-5">
+                          OPERATIONS
                         </div>
                       </div>
                     </div>
@@ -197,10 +208,11 @@ export default function Impact() {
                   </p>
                 </div>
                 <Link
-                  className="bg-primary text-black text-sm lg:text-base self-start px-10 py-1"
+                  className="bg-primary text-black font-medium text-sm lg:text-lg self-start px-10 py-[6px] flex items-center gap-3 w-fit"
                   href="/"
                 >
-                  KNOW MORE --&gt;
+                  <span>KNOW MORE</span>
+                  <i className="fa-light fa-arrow-right-long font-medium"></i>
                 </Link>
               </div>
             </div>
