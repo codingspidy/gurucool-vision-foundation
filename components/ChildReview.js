@@ -18,7 +18,7 @@ import bacha from "../images/bacha.png";
 export default function ChildReview() {
   const swiperPagination = useRef(null);
   return (
-    <div className="lg:pt-24 py-20 lg:py-0 px-4 relative bg-[url('../images/testimonialsBg.png')] lg:bg-[url('/testimonialsBg.png')] bg-no-repeat bg-center lg:bg-right bg-cover">
+    <div className="py-20 px-4 relative bg-[url('../images/testimonialsBg.png')] lg:bg-[url('/testimonialsBg.png')] bg-no-repeat bg-center lg:bg-right bg-cover">
       {/* <div className="absolute lg:hidden inset-0 z-50 bg-gradient-to-t from-black/100 to-black/50" /> */}
       <div className="">
         {/* <Image
