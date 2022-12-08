@@ -46,18 +46,18 @@ export default function IntroSlider() {
                   />
                   <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
-                      <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
+                      <h2 className="swiper-no-swiping text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SUPER GIRLS K INITIATIVE
                       </h2>
                     </div>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                      <p className="text-lg font-medium text-white">
+                      <p className="swiper-no-swiping text-lg font-medium text-white">
                         aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
                         eoje xekkeipo x rjporje eur riir1hrpt r1u2r
                       </p>
                       <Link
                         href=""
-                        className="bg-primary font-medium text-white text-sm py-2 px-6 relatve"
+                        className="bg-primary swiper-no-swiping font-medium text-white text-sm py-2 px-6 relatve"
                       >
                         READ MORE
                       </Link>
@@ -77,18 +77,18 @@ export default function IntroSlider() {
                   />
                   <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
-                      <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
+                      <h2 className="swiper-no-swiping text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SOMETHING ELSE
                       </h2>
                     </div>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                      <p className="text-lg font-medium text-white">
+                      <p className="swiper-no-swiping text-lg font-medium text-white">
                         aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
                         eoje xekkeipo x rjporje eur riir1hrpt r1u2r
                       </p>
                       <Link
                         href=""
-                        className="bg-primary font-medium text-white text-sm py-2 px-6 relative"
+                        className="swiper-no-swiping bg-primary font-medium text-white text-sm py-2 px-6 relative"
                       >
                         READ MORE
                       </Link>
@@ -108,18 +108,18 @@ export default function IntroSlider() {
                   />
                   <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
-                      <h2 className="text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
+                      <h2 className="swiper-no-swiping text-5xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SOMETHING ELSE ELSE
                       </h2>
                     </div>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                      <p className="text-lg font-medium text-white">
+                      <p className="swiper-no-swiping text-lg font-medium text-white">
                         aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
                         eoje xekkeipo x rjporje eur riir1hrpt r1u2r
                       </p>
                       <Link
                         href=""
-                        className="bg-primary text-white font-medium text-sm py-2 px-6 relative"
+                        className="swiper-no-swiping bg-primary text-white font-medium text-sm py-2 px-6 relative"
                       >
                         READ MORE
                       </Link>

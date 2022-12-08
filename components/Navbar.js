@@ -23,7 +23,7 @@ export default function Navbar() {
             src="/logo.png"
             width={150}
             height={50}
-            loading="eager"
+            priority={true}
             className="object-contain"
           />
         </Link>

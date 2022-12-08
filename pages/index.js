@@ -91,10 +91,10 @@ export default function Home() {
         <Statistics />
 
         <section id="sairaVideo">
-          <div className={`py-40 px-4 bg-primary relative min-h-[500px]`}>
+          <div className={`py-40 px-4 relative bg-primary min-h-[500px]`}>
             <div
               onClick={() => setShowModal1(true)}
-              className="text hidden lg:block absolute z-50 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+              className="text hidden lg:block absolute z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
               <div className="play">
                 <button
@@ -164,7 +164,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className="bg-gradient-to-b lg:bg-gradient-to-b to-primary from-transparent absolute inset-0 z-20" />
+              <div className="bg-gradient-to-b to-primary from-transparent lg:bg-none absolute inset-0 z-20" />
 
               <div className="absolute md:left-[18vw] bottom-0 w-full rounded-full ">
                 <Image
