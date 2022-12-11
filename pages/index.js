@@ -97,10 +97,7 @@ export default function Home() {
               className="text hidden lg:block absolute z-[100] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
             >
               <div className="play">
-                <button
-                  id="playBtn"
-                  className=""
-                >
+                <button id="playBtn" className="">
                   <i className="fas fa-play text-xl"></i>
                 </button>
               </div>
@@ -110,7 +107,7 @@ export default function Home() {
                 <div
                   onClick={modal1Handler}
                   ref={modal1}
-                  className="justify-center px-4 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[100] outline-none focus:outline-none"
+                  className="justify-center px-4 items-center flex overflow-x-hidden overflow-y-auto fixed inset-0 z-[100000] outline-none focus:outline-none"
                 >
                   <div className="relative w-auto my-6 mx-auto max-w-3xl">
                     <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
@@ -126,7 +123,7 @@ export default function Home() {
                             objectFit: "cover",
                           }}
                         >
-                          <source src="post2-funding.mp4" />
+                          <source src="padhaaiVideo.mp4" />
                         </video>
                       </div>
                     </div>
@@ -137,28 +134,25 @@ export default function Home() {
             ) : null}
 
             <div className="flex flex-col md:block md:text-left px-4 items-center gap-7 text-white">
-              <div className="text-center md:text-left space-y-4 md:space-y-8 absolute z-50 md:right-[18vw] top-28">
+              <div className="text-center md:text-left space-y-4 md:space-y-8 absolute z-50 md:right-[15vw] top-28">
                 <div>
                   <h4 className="text-xl lg:text-4xl font-bold">
-                    Ankit video, Age 9,
+                    Sapne Hongey Sach -
                   </h4>
                   <h4 className="text-xl lg:text-4xl font-bold">
-                    WhiteHat Jr Coder
+                    Gurucool Padhaai
                   </h4>
                 </div>
                 <p className="text-sm lg:text-base max-w-xs text-center md:text-left">
-                  Watch how coding with WhiteHat Jr helped Saira get better at
-                  Math.
+                  Discover courses, set goals, play bits, join live, avail
+                  scholarships and more.
                 </p>
                 <div
                   onClick={() => setShowModal1(true)}
                   className="text lg:hidden"
                 >
                   <div className="play">
-                    <button
-                      id="playBtn"
-                      className=""
-                    >
+                    <button id="playBtn" className="">
                       <i className="fas fa-play"></i>
                     </button>
                   </div>
@@ -180,7 +174,6 @@ export default function Home() {
         </section>
 
         <ChildReview />
-        <ImpactHighlights />
         <Achievements />
 
         {screenLg ? (

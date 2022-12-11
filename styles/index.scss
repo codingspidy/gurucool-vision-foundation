@@ -30,6 +30,9 @@ a {
 .overlay-gradient-b {
   background: linear-gradient(to bottom, #000000 11%, rgba(0, 0, 0, 0) 100%);
 }
+.overlay-gradient-b-intro {
+  background: linear-gradient(to bottom, #000000 1%, rgba(0, 0, 0, 0) 80%);
+}
 .overlay-gradient-l {
   background: linear-gradient(89.8deg, #000000 7%, rgba(0, 0, 0, 0) 50%);
 }
@@ -38,6 +41,9 @@ a {
 }
 .overlay-gradient-t {
   background: linear-gradient(to top, #000000 11%, rgba(0, 0, 0, 0) 100%);
+}
+.overlay-gradient-t-intro {
+  background: linear-gradient(to top, #000000 1%, rgba(0, 0, 0, 0) 100%);
 }
 
 .footer-links {

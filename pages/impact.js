@@ -1,11 +1,12 @@
 import Link from "next/link";
+import ImpactHighlights from "../components/ImpactHighlights";
 
 export default function Impact() {
   return (
     <div>
-      <div className="w-full h-[49px] lg:h-[67.5px]" />
+      {/* <div className="w-full h-[49px] lg:h-[67.5px]" /> */}
       <section id="campaignIntro">
-        <div className="relative bg-[url('../images/unicef-child.jpg')] bg-no-repeat bg-center bg-cover px-4 py-16 text-white">
+        <div className="relative bg-[url('../images/unicef-child.jpg')] bg-no-repeat bg-center bg-cover px-4 py-40 text-white">
           <div className="absolute inset-0 bg-black/80" />
           <div className="relative z-50 max-w-[1200px] mx-auto">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-16">
@@ -219,6 +220,7 @@ export default function Impact() {
           </div>
         </div>
       </section>
+      <ImpactHighlights />
     </div>
   );
 }

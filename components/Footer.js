@@ -62,70 +62,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-col items-center footer-links mt-20 md:mt-10 text-xs md:text-sm">
-          <div className="px-2 py-4">❤️2020 | Make a difference</div>
-          <div>
-            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
-              <li>
-                <a className="first">FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
-              <li>
-                <a className="first">FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <ul className="flex flex-col sm:flex-row flex-wrap justify-center">
-              <li>
-                <a className="first">FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-              <li>
-                <a>FCRA Registration</a>
-              </li>
-            </ul>
-          </div>
+          <div className="px-2 py-4">💛 2022 | Gurucool Vision Foundation</div>
         </div>
       </div>
     </footer>
