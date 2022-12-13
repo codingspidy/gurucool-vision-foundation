@@ -57,13 +57,13 @@ export default function ChildReview() {
                 />
                 <div className="p-1">
                   <div className="flex flex-col gap-2 lg:mt-28 -mt-10 w-full max-w-md px-4 py-8 rounded-xl shadow-lg lg:shadow-none bg-white lg:bg-transparent">
-                    <h5 className="swiper-no-swiping text-xl lg:text-2xl font-bold">
+                    <h5 className="text-xl lg:text-2xl font-bold">
                       David Chea, Age 10
                     </h5>
-                    <p className="swiper-no-swiping text-lg lg:text-xl font-semibold">
+                    <p className="text-lg lg:text-xl font-semibold">
                       Proud WhiteHat Jr Alumni
                     </p>
-                    <p className="swiper-no-swiping text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
+                    <p className="text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
                       Created {"Safe zone"} App that marks zones which are not
                       safe for children and provides alerts if someone is
                       entering this area. App that marks zones which are not
@@ -86,13 +86,13 @@ export default function ChildReview() {
                 />
                 <div className="p-1">
                   <div className="flex flex-col gap-2 lg:mt-28 -mt-10 w-full max-w-md px-4 py-8 rounded-xl shadow-lg lg:shadow-none bg-white lg:bg-transparent">
-                    <h5 className="swiper-no-swiping text-xl lg:text-2xl font-bold">
+                    <h5 className="text-xl lg:text-2xl font-bold">
                       David Chea, Age 10
                     </h5>
-                    <p className="swiper-no-swiping text-lg lg:text-xl font-semibold">
+                    <p className="text-lg lg:text-xl font-semibold">
                       Proud WhiteHat Jr Alumni
                     </p>
-                    <p className="swiper-no-swiping text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
+                    <p className="text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
                       Created {"Safe zone"} App that marks zones which are not
                       safe for children and provides alerts if someone is
                       entering this area. App that marks zones which are not
@@ -115,13 +115,13 @@ export default function ChildReview() {
                 />
                 <div className="p-1">
                   <div className="flex flex-col gap-2 lg:mt-28 -mt-10 w-full max-w-md px-4 py-8 rounded-xl shadow-lg lg:shadow-none bg-white lg:bg-transparent">
-                    <h5 className="swiper-no-swiping text-xl lg:text-2xl font-bold">
+                    <h5 className="text-xl lg:text-2xl font-bold">
                       David Chea, Age 10
                     </h5>
-                    <p className="swiper-no-swiping text-lg lg:text-xl font-semibold">
+                    <p className="text-lg lg:text-xl font-semibold">
                       Proud WhiteHat Jr Alumni
                     </p>
-                    <p className="swiper-no-swiping text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
+                    <p className="text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
                       Created {"Safe zone"} App that marks zones which are not
                       safe for children and provides alerts if someone is
                       entering this area. App that marks zones which are not
@@ -144,13 +144,13 @@ export default function ChildReview() {
                 />
                 <div className="p-1">
                   <div className="flex flex-col gap-2 lg:mt-28 -mt-10 w-full max-w-md px-4 py-8 rounded-xl shadow-lg lg:shadow-none bg-white lg:bg-transparent">
-                    <h5 className="swiper-no-swiping text-xl lg:text-2xl font-bold">
+                    <h5 className="text-xl lg:text-2xl font-bold">
                       David Chea, Age 10
                     </h5>
-                    <p className="swiper-no-swiping text-lg lg:text-xl font-semibold">
+                    <p className="text-lg lg:text-xl font-semibold">
                       Proud WhiteHat Jr Alumni
                     </p>
-                    <p className="swiper-no-swiping text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
+                    <p className="text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
                       Created {"Safe zone"} App that marks zones which are not
                       safe for children and provides alerts if someone is
                       entering this area. App that marks zones which are not
@@ -173,13 +173,13 @@ export default function ChildReview() {
                 />
                 <div className="p-1">
                   <div className="flex flex-col gap-2 lg:mt-28 -mt-10 w-full max-w-md px-4 py-8 rounded-xl shadow-lg lg:shadow-none bg-white lg:bg-transparent">
-                    <h5 className="swiper-no-swiping text-xl lg:text-2xl font-bold">
+                    <h5 className="text-xl lg:text-2xl font-bold">
                       David Chea, Age 10
                     </h5>
-                    <p className="swiper-no-swiping text-lg lg:text-xl font-semibold">
+                    <p className=" text-lg lg:text-xl font-semibold">
                       Proud WhiteHat Jr Alumni
                     </p>
-                    <p className="swiper-no-swiping text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
+                    <p className="text-xs lg:text-sm max-w-xs lg:max-w-sm text-gray-600">
                       Created {"Safe zone"} App that marks zones which are not
                       safe for children and provides alerts if someone is
                       entering this area. App that marks zones which are not

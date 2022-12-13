@@ -47,13 +47,13 @@ export default function IntroSlider() {
                   />
                   <div className="flex text-left flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
-                      <h2 className="swiper-no-swiping text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
+                      <h2 className="text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SUPERGIRLSK INITIATIVE
                       </h2>
                     </div>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
                       <div>
-                        <p className="swiper-no-swiping text-base lg:text-lg text-white mb-2">
+                        <p className="text-base lg:text-lg text-white mb-2">
                           SuperGirlsK is an all-new initiative by Gurucool
                           aiming to provide free competitive coaching courses to
                           1k girls annually.
@@ -76,7 +76,7 @@ export default function IntroSlider() {
                       <Link
                         target="_blank"
                         href="https://milaap.org/fundraisers/support-super-girls-k"
-                        className="bg-primary swiper-no-swiping font-medium text-black text-sm py-2 px-6 rounded-sm relatve"
+                        className="bg-primary  font-medium text-black text-sm py-2 px-6 rounded-sm relatve"
                       >
                         READ MORE
                       </Link>
@@ -96,17 +96,17 @@ export default function IntroSlider() {
                     alt=""
                   />
                   <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
-                    <h2 className="swiper-no-swiping text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:w-full lg:max-w-md">
+                    <h2 className="text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:w-full lg:max-w-md">
                       GHAR PE EID
                     </h2>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                      <p className="swiper-no-swiping text-base lg:text-lg text-white">
+                      <p className="text-base lg:text-lg text-white">
                         Under this initiative, we provided `Eid Essentials` to
                         the ones financially affected by the pandemic.
                       </p>
                       <Link
                         href=""
-                        className="swiper-no-swiping bg-primary text-black font-medium text-sm rounded-sm py-2 px-6 relative"
+                        className=" bg-primary text-black font-medium text-sm rounded-sm py-2 px-6 relative"
                       >
                         READ MORE
                       </Link>
@@ -127,18 +127,18 @@ export default function IntroSlider() {
                   />
                   <div className="flex flex-col gap-8 lg:gap-0 lg:flex-row max-w-5xl px-4 mx-auto w-full absolute z-20 bottom-[12vh] left-1/2 transform -translate-x-1/2">
                     <div className="">
-                      <h2 className="swiper-no-swiping text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
+                      <h2 className="text-4xl lg:text-6xl px-6 text-white text-shadow-md font-black max-w-sm lg:max-w-3xl">
                         SOMETHING ELSE ELSE
                       </h2>
                     </div>
                     <div className="flex flex-col gap-7 items-start px-6 border-l-8 border-primary">
-                      <p className="swiper-no-swiping text-lg text-white">
+                      <p className="text-lg text-white">
                         aolendkwnere;sjfm kwoemfmg jrwflm j i3ndfm ednf epoj x
                         eoje xekkeipo x rjporje eur riir1hrpt r1u2r
                       </p>
                       <Link
                         href=""
-                        className="swiper-no-swiping bg-primary text-black font-medium rounded-sm text-sm py-2 px-6 relative"
+                        className=" bg-primary text-black font-medium rounded-sm text-sm py-2 px-6 relative"
                       >
                         READ MORE
                       </Link>
